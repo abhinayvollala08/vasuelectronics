@@ -396,7 +396,7 @@ const Header = () => {
                 <Tv size={17} className="tt-logo-icon" style={{ color: "var(--hdr-accent)" }} />
               </div>
               <div>
-                <div className="tt-hdr-logo-name">TechnoTV</div>
+                <div className="tt-hdr-logo-name">Vasu</div>
                 <div className="tt-hdr-logo-sub">Electronics &amp; Home Theater</div>
               </div>
             </Link>
