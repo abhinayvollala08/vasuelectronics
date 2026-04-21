@@ -252,8 +252,8 @@ const Services = () => {
                   expert care across Peddapalli &amp; Mancherial.
                 </p>
                 <div className="tt-hero-ctas" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                  <a href="tel:+919876543210" className="tt-btn-p" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--accent)", color: "#fff", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "13px 26px", borderRadius: 10, textDecoration: "none", boxShadow: "0 4px 16px rgba(26,95,191,.28)", whiteSpace: "nowrap" }}>
-                    <Phone size={15} /> +91 98765 43210
+                  <a href="tel:+919912172878" className="tt-btn-p" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--accent)", color: "#fff", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "13px 26px", borderRadius: 10, textDecoration: "none", boxShadow: "0 4px 16px rgba(26,95,191,.28)", whiteSpace: "nowrap" }}>
+                    <Phone size={15} /> +91 99121 72878
                   </a>
                   <Link to="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "transparent", color: "var(--accent)", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "12px 22px", borderRadius: 10, textDecoration: "none", border: "1.5px solid var(--accent-bd)", whiteSpace: "nowrap" }}>
                     Book Online <ArrowRight size={14} />
@@ -380,8 +380,8 @@ const Services = () => {
                 Free diagnosis. Transparent pricing. Technician arrives same day across Peddapalli &amp; Mancherial.
               </p>
               <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap", marginBottom: 32 }}>
-                <a href="tel:+919876543210" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--cta-dark)", color: "var(--cta-dark-tx)", fontFamily: "'DM Sans',sans-serif", fontWeight: 700, fontSize: ".9rem", padding: "14px 28px", borderRadius: 10, textDecoration: "none", boxShadow: "0 6px 24px rgba(0,0,0,.2)" }}>
-                  <Phone size={15} /> +91 98765 43210
+                <a href="tel:+919912172878" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--cta-dark)", color: "var(--cta-dark-tx)", fontFamily: "'DM Sans',sans-serif", fontWeight: 700, fontSize: ".9rem", padding: "14px 28px", borderRadius: 10, textDecoration: "none", boxShadow: "0 6px 24px rgba(0,0,0,.2)" }}>
+                  <Phone size={15} /> +91 99121 72878
                 </a>
                 <Link to="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "transparent", color: "#fff", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "13px 22px", borderRadius: 10, textDecoration: "none", border: "1.5px solid rgba(255,255,255,.4)" }}>
                   Book Online <ArrowRight size={14} />

@@ -15,8 +15,8 @@ const fadeUp = (delay = 0): MotionProps => ({
 /* ─── data ──────────────────────────────────────────────────────── */
 const contactInfo = [
   { Icon: MapPin, label: "Visit Us",       value: "Peddapalli & Mancherial Districts, Telangana, India", href: undefined },
-  { Icon: Phone,  label: "Call Us",        value: "+91 98765 43210",  href: "tel:+919876543210" },
-  { Icon: Mail,   label: "Email Us",       value: "info@technotv.in", href: "mailto:info@technotv.in" },
+  { Icon: Phone,  label: "Call Us",        value: "+91 99121 72878",  href: "tel:+919876543210" },
+  { Icon: Mail,   label: "Email Us",       value: "vasuelectronics97@gmail.com", href: "mailto:vasuelectronics97@gmail.com" },
   { Icon: Clock,  label: "Working Hours",  value: "Mon – Sat: 9:00 AM – 7:00 PM", href: undefined },
 ];
 
@@ -188,9 +188,9 @@ const Contact = () => {
                 </p>
                 <div className="tt-hero-ctas" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                   <a href="tel:+919876543210" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--accent)", color: "#fff", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "13px 26px", borderRadius: 10, textDecoration: "none", boxShadow: "0 4px 16px rgba(26,95,191,.28)", whiteSpace: "nowrap" }}>
-                    <Phone size={15} /> +91 98765 43210
+                    <Phone size={15} /> +91 99121 72878
                   </a>
-                  <a href="mailto:info@technotv.in" style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "transparent", color: "var(--accent)", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "12px 22px", borderRadius: 10, textDecoration: "none", border: "1.5px solid var(--accent-bd)", whiteSpace: "nowrap" }}>
+                  <a href="mailto:vasuelectronics97@gmail.com" style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "transparent", color: "var(--accent)", fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: ".88rem", padding: "12px 22px", borderRadius: 10, textDecoration: "none", border: "1.5px solid var(--accent-bd)", whiteSpace: "nowrap" }}>
                     <Mail size={14} /> Email Us <ArrowRight size={13} />
                   </a>
                 </div>

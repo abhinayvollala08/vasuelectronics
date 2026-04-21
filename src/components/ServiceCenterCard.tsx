@@ -141,7 +141,7 @@ const ServiceCenterCard = () => {
             {/* Map */}
             <iframe
               title="TechnoTV Location"
-              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121668.7!2d79.35!3d18.62!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcce0e0e0e0e0e1%3A0x0!2sPeddapalli!5e0!3m2!1sen!2sin!4v1700000000000"
+              // src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15111.18382674589!2d79.47424400000001!3d18.762649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a32ce9c5ca19d75%3A0xbd503add23ac3ef5!2sVASU%20ELECTRONICS%20F%26D%20LED!5e0!3m2!1sen!2sin!4v1776778697315!5m2!1sen!2sin"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.795948121903!2d79.47166907475636!3d18.76264938237851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a32ce9c5ca19d75%3A0xbd503add23ac3ef5!2sVASU%20ELECTRONICS%20F%26D%20LED!5e0!3m2!1sen!2sin!4v1773137688612!5m2!1sen!2sin"
               className="tt-scc-map"
               allowFullScreen
@@ -171,14 +171,14 @@ const ServiceCenterCard = () => {
                 <span>Mon – Sat: 9:00 AM – 7:00 PM &nbsp;|&nbsp; Sun: Closed</span>
               </div>
 
-              <a href="tel:+919876543210" className="tt-scc-row">
+              <a href="tel:+919912172878" className="tt-scc-row">
                 <div className="tt-scc-ib"><Phone size={14} style={{ color: "var(--accent, #1A5FBF)" }} /></div>
-                <span>+91 98765 43210</span>
+                <span>+91 99121 72878</span>
               </a>
 
-              <a href="mailto:info@technotv.in" className="tt-scc-row">
+              <a href="mailto:vasuelectronics97@gmail.com" className="tt-scc-row">
                 <div className="tt-scc-ib"><Mail size={14} style={{ color: "var(--accent, #1A5FBF)" }} /></div>
-                <span>info@technotv.in</span>
+                <span>vasuelectronics97@gmail.com</span>
               </a>
 
               <div className="tt-scc-hr" />

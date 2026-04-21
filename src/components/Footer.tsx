@@ -235,9 +235,9 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@technotv.in" className="tt-footer-contact">
+                  <a href="mailto:vasuelectronics97@gmail.com" className="tt-footer-contact">
                     <div className="tt-footer-ib"><Mail size={13} style={{ color: "var(--footer-accent)" }} /></div>
-                    info@technotv.in
+                    vasuelectronics97@gmail.com
                   </a>
                 </li>
                 <li>

@@ -522,8 +522,8 @@ export const HeroSection = () => {
                 transition={{ duration:.5, delay:.44, ease:[.22,1,.36,1] }}
                 className="hw-ctas" style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:26 }}
               >
-                <a href="tel:+919876543210" className="hw-btn-p">
-                  <Phone size={16}/> +91 98765 43210
+                <a href="tel:+919912172878" className="hw-btn-p">
+                  <Phone size={16}/> +91 99121 72878
                 </a>
                 <Link to="/services" className="hw-btn-g">
                   Our Services <ArrowRight size={15}/>
@@ -573,7 +573,7 @@ export const HeroSection = () => {
                         Call before noon — we confirm your slot
                       </div>
                     </div>
-                    <a href="tel:+919876543210" style={{
+                    <a href="tel:+919912172878" style={{
                       display:"inline-flex", alignItems:"center", gap:6,
                       background:"var(--accent)", color:"#fff",
                       fontSize:".8rem", fontWeight:700,
