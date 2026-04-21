@@ -76,7 +76,7 @@ const Header = () => {
           -webkit-font-smoothing: antialiased;
 
           /* Light */
-          --hdr-bg:         rgba(255,255,255,0.90);
+          --hdr-bg:         rgb(255,255,255);
           --hdr-border:     rgba(217,225,238,0.85);
           --hdr-tx1:        #0D1526;
           --hdr-tx2:        #475569;
@@ -148,12 +148,12 @@ const Header = () => {
           max-width: 1180px; margin: 0 auto;
           padding: 0 24px;
           display: flex; align-items: center; justify-content: space-between;
-          height: 64px;
+          min-height: 68px;
           transition: height .28s ease;
           gap: 8px;
         }
-        .tt-hdr-inner.scrolled { height: 56px; }
-        @media(max-width:600px){ .tt-hdr-inner{ padding:0 16px; } }
+        .tt-hdr-inner.scrolled { height: 64px; }
+        @media(max-width:600px){ .tt-hdr-inner{ padding:0 22px; } }
 
         /* ── Logo ──────────────────────────────────────────────── */
         .tt-hdr-logo {
@@ -384,6 +384,29 @@ const Header = () => {
           background: rgba(255,255,255,.18);
           display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
+          /* Logo image sizing */
+.tt-hdr-logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.28s ease, transform 0.28s ease;
+}
+
+/* When header is scrolled */
+.tt-hdr-inner.scrolled .tt-hdr-logo-img {
+  height: 70px;
+  transform: scale(0.98);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .tt-hdr-logo-img {
+    height: 50px;
+  }
+  .tt-hdr-inner.scrolled .tt-hdr-logo-img {
+    height: 42px;
+  }
+}
       `}</style>
 
       <header className="tt-hdr" data-theme={dark ? "dark" : "light"}>
@@ -392,13 +415,7 @@ const Header = () => {
 
             {/* Logo */}
             <Link to="/" className="tt-hdr-logo">
-              <div className="tt-hdr-logo-box">
-                <Tv size={17} className="tt-logo-icon" style={{ color: "var(--hdr-accent)" }} />
-              </div>
-              <div>
-                <div className="tt-hdr-logo-name">Vasu</div>
-                <div className="tt-hdr-logo-sub">Electronics &amp; Home Theater</div>
-              </div>
+             <img src="logo.png" className="tt-hdr-logo-img" alt="Vasu Electronics" />
             </Link>
 
             {/* Desktop nav */}
@@ -431,32 +448,6 @@ const Header = () => {
 
               <div className="tt-hdr-sep" />
 
-              {/* ── Theme toggle ── */}
-              <button
-                className="tt-theme-btn"
-                onClick={toggle}
-                aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-                title={dark ? "Light mode" : "Dark mode"}
-              >
-                {/* Sun icon — visible in dark mode */}
-                <Sun
-                  size={15}
-                  className="tt-theme-icon tt-theme-icon-sun"
-                  style={{
-                    opacity:   dark ? 1 : 0,
-                    transform: dark ? "scale(1) rotate(0deg)" : "scale(0.5) rotate(90deg)",
-                  }}
-                />
-                {/* Moon icon — visible in light mode */}
-                <Moon
-                  size={14}
-                  className="tt-theme-icon tt-theme-icon-moon"
-                  style={{
-                    opacity:   dark ? 0 : 1,
-                    transform: dark ? "scale(0.5) rotate(-90deg)" : "scale(1) rotate(0deg)",
-                  }}
-                />
-              </button>
 
               {/* Hamburger — mobile only */}
               <button
