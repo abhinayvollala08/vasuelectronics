@@ -386,7 +386,7 @@ const Header = () => {
         }
           /* Logo image sizing */
 .tt-hdr-logo-img {
-  height: 70px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   transition: height 0.28s ease, transform 0.28s ease;
@@ -415,7 +415,7 @@ const Header = () => {
 
             {/* Logo */}
             <Link to="/" className="tt-hdr-logo">
-             <img src="logo.png" className="tt-hdr-logo-img" alt="Vasu Electronics" />
+             <img src="logo5.png" className="tt-hdr-logo-img" alt="Vasu Electronics" />
             </Link>
 
             {/* Desktop nav */}
@@ -434,15 +434,14 @@ const Header = () => {
             {/* Right cluster */}
             <div className="tt-hdr-right">
               {/* Phone number */}
+              
+
+              <div className="tt-hdr-sep phone-sep" />
               <a href="tel:+919912172878" className="tt-hdr-phone">
                 <Phone size={13} />
                 +91 99121 72878
               </a>
-
-              <div className="tt-hdr-sep phone-sep" />
-
-
-              <div className="tt-hdr-sep" />
+              {/* <div className="tt-hdr-sep" /> */}
 
 
               {/* Hamburger — mobile only */}

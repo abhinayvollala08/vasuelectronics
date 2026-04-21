@@ -179,7 +179,7 @@ const Footer = () => {
             {/* ① Brand */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                  <img src="logo.png" className="tt-hdr-logo-img rounded-xl" alt="Vasu Electronics" />
+                  <img src="logo4.png" className="tt-hdr-logo-img rounded-xl" alt="Vasu Electronics" />
               </div>
 
               <p style={{ fontSize: ".83rem", lineHeight: 1.76, color: "var(--footer-tx2)", marginBottom: 20, maxWidth: 280 }}>
