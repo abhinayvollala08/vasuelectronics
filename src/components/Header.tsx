@@ -434,17 +434,13 @@ const Header = () => {
             {/* Right cluster */}
             <div className="tt-hdr-right">
               {/* Phone number */}
-              <a href="tel:+919876543210" className="tt-hdr-phone">
+              <a href="tel:+919912172878" className="tt-hdr-phone">
                 <Phone size={13} />
-                +91 98765 43210
+                +91 99121 72878
               </a>
 
               <div className="tt-hdr-sep phone-sep" />
 
-              {/* Call Now button */}
-              <a href="tel:+919876543210" className="tt-hdr-call">
-                <Phone size={13} /> Call Now
-              </a>
 
               <div className="tt-hdr-sep" />
 
@@ -528,7 +524,7 @@ const Header = () => {
 
                 {/* Call button */}
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919912172878"
                   className="tt-mob-call"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -537,7 +533,7 @@ const Header = () => {
                   </div>
                   <div>
                     <div style={{ fontSize: ".74rem", opacity: .72, lineHeight: 1 }}>Call us now</div>
-                    <div style={{ fontSize: ".92rem", fontWeight: 700, marginTop: 2 }}>+91 98765 43210</div>
+                    <div style={{ fontSize: ".92rem", fontWeight: 700, marginTop: 2 }}>+91 99121 72878</div>
                   </div>
                 </a>
               </motion.div>

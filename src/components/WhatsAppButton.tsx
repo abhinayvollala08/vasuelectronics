@@ -101,7 +101,7 @@ const WhatsAppButton = () => {
       `}</style>
 
       <motion.a
-        href="https://wa.me/919876543210?text=Hi%20TechnoTV%2C%20I%20need%20service%20for%20my%20electronics."
+        href="https://wa.me/919912172878?text=Hi%20Vasu%20Electronics%20I%20need%20service%20for%20my%20electronics."
         target="_blank"
         rel="noopener noreferrer"
         className="tt-wa-btn"

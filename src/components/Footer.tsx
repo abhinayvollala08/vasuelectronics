@@ -179,17 +179,7 @@ const Footer = () => {
             {/* ① Brand */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <div className="tt-footer-brand-box">
-                  <Tv size={19} style={{ color: "var(--footer-accent)" }} />
-                </div>
-                <div>
-                  <div style={{ fontFamily: "'DM Serif Display',serif", fontSize: "1.15rem", color: "var(--footer-tx1)", lineHeight: 1.1 }}>
-                    TechnoTV
-                  </div>
-                  <div style={{ fontFamily: "'DM Mono',monospace", fontSize: ".56rem", letterSpacing: ".14em", textTransform: "uppercase", color: "var(--footer-tx3)", marginTop: 3 }}>
-                    Electronics &amp; Home Theater
-                  </div>
-                </div>
+                  <img src="logo.png" className="tt-hdr-logo-img rounded-xl" alt="Vasu Electronics" />
               </div>
 
               <p style={{ fontSize: ".83rem", lineHeight: 1.76, color: "var(--footer-tx2)", marginBottom: 20, maxWidth: 280 }}>
@@ -239,9 +229,9 @@ const Footer = () => {
                   </div>
                 </li>
                 <li>
-                  <a href="tel:+919876543210" className="tt-footer-contact">
+                  <a href="tel:+919912172878" className="tt-footer-contact">
                     <div className="tt-footer-ib"><Phone size={13} style={{ color: "var(--footer-accent)" }} /></div>
-                    +91 98765 43210
+                    +91 99121 72878
                   </a>
                 </li>
                 <li>
@@ -293,7 +283,7 @@ const Footer = () => {
             flexWrap: "wrap", gap: 12,
           }}>
             <span className="tt-footer-btm" style={{ color: "var(--footer-tx3)", cursor: "default" }}>
-              © {new Date().getFullYear()} TechnoTV Electronics &amp; Home Theater Service Center. All rights reserved.
+              © {new Date().getFullYear()} VASU Electronics &amp; Home Theater Service Center. All rights reserved.
             </span>
             <div style={{ display: "flex", gap: 20 }}>
               {["Privacy Policy", "Terms of Service"].map((t) => (
