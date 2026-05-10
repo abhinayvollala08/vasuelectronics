@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Menu, X, Phone, ChevronDown, Sun, Moon } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 const navItems = [{
   label: "Home",
@@ -31,14 +31,14 @@ const getStoredTheme = () => {
   try {
     const stored = localStorage.getItem(THEME_KEY);
     if (stored !== null) return stored === "dark";
-  } catch {}
+  } catch { }
   return false; // default: light mode
 };
 const broadcastTheme = dark => {
   if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
-  } catch {}
+  } catch { }
   window.dispatchEvent(new CustomEvent(THEME_EVT, {
     detail: {
       dark
@@ -92,7 +92,7 @@ const Header = () => {
     setMobileOpen(false);
   }, [location.pathname]);
   return <>
-      <style>{`
+    <style>{`
         .tt-hdr {
           font-family: 'DM Sans', system-ui, sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -431,46 +431,46 @@ const Header = () => {
 }
       `}</style>
 
-      <header className="tt-hdr" data-theme={dark ? "dark" : "light"}>
-        <div className={`tt-hdr-wrap ${scrolled ? "scrolled" : ""}`}>
-          <div className={`tt-hdr-inner ${scrolled ? "scrolled" : ""}`}>
+    <header className="tt-hdr" data-theme={dark ? "dark" : "light"}>
+      <div className={`tt-hdr-wrap ${scrolled ? "scrolled" : ""}`}>
+        <div className={`tt-hdr-inner ${scrolled ? "scrolled" : ""}`}>
 
-            {/* Logo */}
-            <Link href="/" className="tt-hdr-logo">
-             <img src="/logo5.png" className="tt-hdr-logo-img" alt="Vasu Electronics" />
-            </Link>
+          {/* Logo */}
+          <Link href="/" className="tt-hdr-logo">
+            <img src="/logo5.png" className="tt-hdr-logo-img" alt="Vasu Electronics" />
+          </Link>
 
-            {/* Desktop nav */}
-            <nav className="tt-hdr-nav">
-              {navItems.map(item => <Link key={item.path} href={item.path} className={`tt-nav-link ${location.pathname === item.path ? "active" : ""}`}>
-                  {item.label}
-                </Link>)}
-            </nav>
+          {/* Desktop nav */}
+          <nav className="tt-hdr-nav">
+            {navItems.map(item => <Link key={item.path} href={item.path} className={`tt-nav-link ${location.pathname === item.path ? "active" : ""}`}>
+              {item.label}
+            </Link>)}
+          </nav>
 
-            {/* Right cluster */}
-            <div className="tt-hdr-right">
-              {/* Phone number */}
-              
-
-              <div className="tt-hdr-sep phone-sep" />
-              <a href="tel:+919912172878" className="tt-hdr-phone">
-                <Phone size={13} />
-                +91 99121 72878
-              </a>
-              {/* <div className="tt-hdr-sep" /> */}
+          {/* Right cluster */}
+          <div className="tt-hdr-right">
+            {/* Phone number */}
 
 
-              {/* Hamburger — mobile only */}
-              <button className="tt-ham" onClick={() => setMobileOpen(o => !o)} aria-label="Toggle menu">
-                {mobileOpen ? <X size={17} /> : <Menu size={17} />}
-              </button>
-            </div>
+            <div className="tt-hdr-sep phone-sep" />
+            <a href="tel:+919912172878" className="tt-hdr-phone">
+              <Phone size={13} />
+              +91 99121 72878
+            </a>
+            {/* <div className="tt-hdr-sep" /> */}
+
+
+            {/* Hamburger — mobile only */}
+            <button className="tt-ham" onClick={() => setMobileOpen(o => !o)} aria-label="Toggle menu">
+              {mobileOpen ? <X size={17} /> : <Menu size={17} />}
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile drawer */}
-        <AnimatePresence>
-          {mobileOpen && <motion.div className="tt-mob-drawer" initial={{
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {mobileOpen && <motion.div className="tt-mob-drawer" initial={{
           opacity: 0
         }} animate={{
           opacity: 1
@@ -479,9 +479,9 @@ const Header = () => {
         }} transition={{
           duration: 0.18
         }}>
-              <div className="tt-mob-overlay" onClick={() => setMobileOpen(false)} />
+          <div className="tt-mob-overlay" onClick={() => setMobileOpen(false)} />
 
-              <motion.div className="tt-mob-panel" initial={{
+          <motion.div className="tt-mob-panel" initial={{
             opacity: 0,
             y: -10,
             scale: 0.97
@@ -497,57 +497,41 @@ const Header = () => {
             duration: 0.2,
             ease: [0.22, 1, 0.36, 1]
           }}>
-                {/* Nav links */}
-                <nav className="tt-mob-nav">
-                  {navItems.map(item => <Link key={item.path} href={item.path} className={`tt-mob-link ${location.pathname === item.path ? "active" : ""}`} onClick={() => setMobileOpen(false)}>
-                      {item.label}
-                      <ChevronDown size={13} style={{
+            {/* Nav links */}
+            <nav className="tt-mob-nav">
+              {navItems.map(item => <Link key={item.path} href={item.path} className={`tt-mob-link ${location.pathname === item.path ? "active" : ""}`} onClick={() => setMobileOpen(false)}>
+                {item.label}
+                <ChevronDown size={13} style={{
                   transform: "rotate(-90deg)",
                   color: location.pathname === item.path ? "var(--hdr-accent)" : "var(--hdr-tx3)"
                 }} />
-                    </Link>)}
-                </nav>
+              </Link>)}
+            </nav>
 
-                <div className="tt-mob-hr" />
+            {/* Theme toggle row removed as per user request */}
 
-                {/* Theme toggle row */}
-                <div className="tt-mob-theme-row">
-                  <span className="tt-mob-theme-label">
-                    {dark ? <><Moon size={14} style={{
-                    color: "var(--hdr-accent)"
-                  }} /> Dark mode</> : <><Sun size={14} style={{
-                    color: "var(--hdr-accent)"
-                  }} /> Light mode</>}
-                  </span>
-                  <div className={`tt-mob-toggle-track ${dark ? "on" : ""}`} onClick={toggle} role="switch" aria-checked={dark} aria-label="Toggle dark mode">
-                    <div className="tt-mob-toggle-thumb" />
-                  </div>
-                </div>
-
-                <div className="tt-mob-hr" />
-
-                {/* Call button */}
-                <a href="tel:+919912172878" className="tt-mob-call" onClick={() => setMobileOpen(false)}>
-                  <div className="tt-mob-call-icon">
-                    <Phone size={14} />
-                  </div>
-                  <div>
-                    <div style={{
+            {/* Call button */}
+            <a href="tel:+919912172878" className="tt-mob-call" onClick={() => setMobileOpen(false)}>
+              <div className="tt-mob-call-icon">
+                <Phone size={14} />
+              </div>
+              <div>
+                <div style={{
                   fontSize: ".74rem",
                   opacity: .72,
                   lineHeight: 1
                 }}>Call us now</div>
-                    <div style={{
+                <div style={{
                   fontSize: ".92rem",
                   fontWeight: 700,
                   marginTop: 2
                 }}>+91 99121 72878</div>
-                  </div>
-                </a>
-              </motion.div>
-            </motion.div>}
-        </AnimatePresence>
-      </header>
-    </>;
+              </div>
+            </a>
+          </motion.div>
+        </motion.div>}
+      </AnimatePresence>
+    </header>
+  </>;
 };
 export default Header;
