@@ -303,7 +303,6 @@ const Index = () => {
         {/* ══════════════════════════════════════════════════════
             HERO
          ══════════════════════════════════════════════════════ */}
-        <HeroSection />
 
         {/* Ticker */}
         {/* <div style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", background: "var(--surface)", overflow: "hidden", padding: "10px 0" }}>
