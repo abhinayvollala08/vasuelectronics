@@ -20,54 +20,12 @@ const navItems = [{
   path: "/contact"
 }];
 
-/* ─── Global theme helpers ──────────────────────────────────────────
-   We keep theme state in localStorage + broadcast via a custom event
-   so Header and Index (which owns the .tt wrapper) stay in sync.
-──────────────────────────────────────────────────────────────────── */
-const THEME_KEY = "tt-theme";
-const THEME_EVT = "tt-theme-change";
-const getStoredTheme = () => {
-  if (typeof window === 'undefined') return false;
-  try {
-    const stored = localStorage.getItem(THEME_KEY);
-    if (stored !== null) return stored === "dark";
-  } catch { }
-  return false; // default: light mode
-};
-const broadcastTheme = dark => {
-  if (typeof window === 'undefined') return;
-  try {
-    localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
-  } catch { }
-  window.dispatchEvent(new CustomEvent(THEME_EVT, {
-    detail: {
-      dark
-    }
-  }));
-};
-
-/* ─── Hook: useDarkMode ─────────────────────────────────────────── */
+/* ─── Global theme helpers (Disabled) ────────────────────────────── */
 export const useDarkMode = () => {
-  const [dark, setDark] = useState(getStoredTheme);
-
-  /* Listen for changes broadcast by Header or Index */
-  useEffect(() => {
-    const fn = e => setDark(e.detail.dark);
-    window.addEventListener(THEME_EVT, fn);
-    return () => window.removeEventListener(THEME_EVT, fn);
-  }, []);
-
-  /* System preference intentionally not followed — light is the default. */
-
-  const toggle = useCallback(() => {
-    setDark(d => {
-      broadcastTheme(!d);
-      return !d;
-    });
-  }, []);
+  // Always force light mode as requested by the user
   return {
-    dark,
-    toggle
+    dark: false,
+    toggle: () => {}
   };
 };
 

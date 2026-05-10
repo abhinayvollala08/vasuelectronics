@@ -75,7 +75,7 @@ const avatarColors = [{
 }];
 const GoogleReviews = () => {
   return <>
-      <style>{`
+    <style>{`
         .tt-gr-card {
           background: var(--surface, #fff);
           border: 1px solid var(--border, #DDE3EF);
@@ -142,23 +142,23 @@ const GoogleReviews = () => {
         }
       `}</style>
 
-      <section style={{
+    <section style={{
       padding: "80px 0 88px",
       background: "var(--bg, #F5F7FA)"
     }}>
-        <div style={{
+      <div style={{
         maxWidth: 1180,
         margin: "0 auto",
         padding: "0 24px"
       }}>
 
-          {/* ── Header ───────────────────────────────────── */}
-          <motion.div {...fadeUp(0)} style={{
+        {/* ── Header ───────────────────────────────────── */}
+        <motion.div {...fadeUp(0)} style={{
           textAlign: "center",
           marginBottom: 52
         }}>
 
-            <div style={{
+          <div style={{
             fontFamily: "'DM Mono', monospace",
             fontSize: ".68rem",
             letterSpacing: ".18em",
@@ -166,24 +166,24 @@ const GoogleReviews = () => {
             color: "var(--accent, #1B65C8)",
             marginBottom: 10
           }}>
-              Verified Reviews
-            </div>
+            Verified Reviews
+          </div>
 
-            <h2 style={{
+          <h2 style={{
             fontFamily: "'DM Serif Display', serif",
             fontSize: "clamp(1.8rem,3.8vw,2.6rem)",
             color: "var(--tx1, #0F172A)",
             marginBottom: 32,
             lineHeight: 1.15
           }}>
-              What Our Customers Say
-            </h2>
+            What Our Customers Say
+          </h2>
 
-            {/* Stats row */}
-            <div className="tt-gr-stats-row">
-              {/* Google rating */}
-              <div className="tt-gr-stat">
-                <div style={{
+          {/* Stats row */}
+          <div className="tt-gr-stats-row">
+            {/* Google rating */}
+            <div className="tt-gr-stat">
+              <div style={{
                 width: 38,
                 height: 38,
                 borderRadius: 9,
@@ -194,36 +194,36 @@ const GoogleReviews = () => {
                 justifyContent: "center",
                 flexShrink: 0
               }}>
-                  <Star size={18} style={{
+                <Star size={18} style={{
                   color: "#FBBF24",
                   fill: "#FBBF24"
                 }} />
-                </div>
-                <div>
-                  <div style={{
+              </div>
+              <div>
+                <div style={{
                   fontFamily: "'DM Serif Display', serif",
                   fontSize: "1.4rem",
                   color: "var(--tx1, #0F172A)",
                   lineHeight: 1
                 }}>
-                    4.5 <span style={{
+                  4.5 <span style={{
                     fontSize: ".75rem",
                     fontFamily: "'DM Sans',sans-serif",
                     fontWeight: 400,
                     color: "var(--tx3, #64748B)"
                   }}>/5</span>
-                  </div>
-                  <div style={{
+                </div>
+                <div style={{
                   fontSize: ".75rem",
                   color: "var(--tx3, #64748B)",
                   marginTop: 3
                 }}>Google Rating</div>
-                </div>
               </div>
+            </div>
 
-              {/* Reviews count */}
-              <div className="tt-gr-stat">
-                <div style={{
+            {/* Reviews count */}
+            <div className="tt-gr-stat">
+              <div style={{
                 width: 38,
                 height: 38,
                 borderRadius: 9,
@@ -234,30 +234,30 @@ const GoogleReviews = () => {
                 justifyContent: "center",
                 flexShrink: 0
               }}>
-                  <Users size={18} style={{
+                <Users size={18} style={{
                   color: "var(--accent, #1B65C8)"
                 }} />
-                </div>
-                <div>
-                  <div style={{
+              </div>
+              <div>
+                <div style={{
                   fontFamily: "'DM Serif Display', serif",
                   fontSize: "1.4rem",
                   color: "var(--tx1, #0F172A)",
                   lineHeight: 1
                 }}>
-                    500+
-                  </div>
-                  <div style={{
+                  500+
+                </div>
+                <div style={{
                   fontSize: ".75rem",
                   color: "var(--tx3, #64748B)",
                   marginTop: 3
                 }}>Google Reviews</div>
-                </div>
               </div>
+            </div>
 
-              {/* Happy customers */}
-              <div className="tt-gr-stat">
-                <div style={{
+            {/* Happy customers */}
+            <div className="tt-gr-stat">
+              <div style={{
                 width: 38,
                 height: 38,
                 borderRadius: 9,
@@ -268,52 +268,52 @@ const GoogleReviews = () => {
                 justifyContent: "center",
                 flexShrink: 0
               }}>
-                  <span style={{
+                <span style={{
                   fontSize: "1rem"
                 }}>😊</span>
-                </div>
-                <div>
-                  <div style={{
+              </div>
+              <div>
+                <div style={{
                   fontFamily: "'DM Serif Display', serif",
                   fontSize: "1.4rem",
                   color: "var(--tx1, #0F172A)",
                   lineHeight: 1
                 }}>
-                    1,000+
-                  </div>
-                  <div style={{
+                  1,000+
+                </div>
+                <div style={{
                   fontSize: ".75rem",
                   color: "var(--tx3, #64748B)",
                   marginTop: 3
                 }}>Happy Customers</div>
-                </div>
               </div>
             </div>
-          </motion.div> 
+          </div>
+        </motion.div>
 
-          {/* ── Review cards ─────────────────────────────── */}
-          <div className="tt-gr-grid" style={{
+        {/* ── Review cards ─────────────────────────────── */}
+        <div className="tt-gr-grid" style={{
           marginBottom: 44
         }}>
-            {reviews.map((review, i) => {
+          {reviews.map((review, i) => {
             const av = avatarColors[i % avatarColors.length];
             return <motion.div key={review.name} {...fadeUp(i * 0.07)} className="tt-gr-card tt-gr-card-dots">
 
-                  {/* Quote decoration */}
-                  <Quote size={22} className="tt-gr-quote" />
+              {/* Quote decoration */}
+              <Quote size={22} className="tt-gr-quote" />
 
-                  <div style={{
+              <div style={{
                 position: "relative",
                 zIndex: 1
               }}>
-                    {/* Reviewer row */}
-                    <div style={{
+                {/* Reviewer row */}
+                <div style={{
                   display: "flex",
                   alignItems: "center",
                   gap: 11,
                   marginBottom: 14
                 }}>
-                      <div style={{
+                  <div style={{
                     width: 40,
                     height: 40,
                     borderRadius: "50%",
@@ -328,52 +328,52 @@ const GoogleReviews = () => {
                     flexShrink: 0,
                     border: `1.5px solid ${av.color}30`
                   }}>
-                        {review.name.charAt(0)}
-                      </div>
-                      <div>
-                        <div style={{
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div style={{
                       fontSize: ".88rem",
                       fontWeight: 600,
                       color: "var(--tx1, #0F172A)",
                       lineHeight: 1.2
                     }}>
-                          {review.name}
-                        </div>
-                        <div style={{
+                      {review.name}
+                    </div>
+                    <div style={{
                       fontSize: ".73rem",
                       color: "var(--tx3, #64748B)",
                       marginTop: 2
                     }}>
-                          {review.time}
-                        </div>
-                      </div>
+                      {review.time}
                     </div>
+                  </div>
+                </div>
 
-                    {/* Stars */}
-                    <div style={{
+                {/* Stars */}
+                <div style={{
                   display: "flex",
                   gap: 3,
                   marginBottom: 12
                 }}>
-                      {Array.from({
+                  {Array.from({
                     length: 5
                   }).map((_, j) => <Star key={j} size={14} style={{
                     color: j < review.rating ? "#FBBF24" : "var(--border, #DDE3EF)",
                     fill: j < review.rating ? "#FBBF24" : "var(--border, #DDE3EF)"
                   }} />)}
-                    </div>
+                </div>
 
-                    {/* Review text */}
-                    <p style={{
+                {/* Review text */}
+                <p style={{
                   fontSize: ".85rem",
                   lineHeight: 1.7,
                   color: "var(--tx2, #334155)"
                 }}>
-                      {review.text}
-                    </p>
+                  {review.text}
+                </p>
 
-                    {/* Google badge */}
-                    <div style={{
+                {/* Google badge */}
+                <div style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 5,
@@ -383,39 +383,39 @@ const GoogleReviews = () => {
                   background: "var(--subtle, #EDF0F6)",
                   border: "1px solid var(--border, #DDE3EF)"
                 }}>
-                      {/* Google G */}
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-                      </svg>
-                      <span style={{
+                  {/* Google G */}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05" />
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
+                  </svg>
+                  <span style={{
                     fontSize: ".67rem",
                     fontFamily: "'DM Mono',monospace",
                     color: "var(--tx3, #64748B)",
                     letterSpacing: ".06em"
                   }}>
-                        Google Review
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>;
+                    Google Review
+                  </span>
+                </div>
+              </div>
+            </motion.div>;
           })}
-          </div>
+        </div>
 
-          {/* ── CTA ──────────────────────────────────────── */}
-          <div style={{
+        {/* ── CTA ──────────────────────────────────────── */}
+        <div style={{
           textAlign: "center"
         }}>
-            <a href="https://www.google.com/maps/place/TechnoTV" target="_blank" rel="noopener noreferrer" className="tt-gr-view-btn">
-              View All Reviews on Google
-              <ExternalLink size={14} />
-            </a>
-          </div>
-
+          <a href="https://maps.app.goo.gl/tHB11xNSfbqy18E59" target="_blank" rel="noopener noreferrer" className="tt-gr-view-btn">
+            View All Reviews on Google
+            <ExternalLink size={14} />
+          </a>
         </div>
-      </section>
-    </>;
+
+      </div>
+    </section>
+  </>;
 };
 export default GoogleReviews;
