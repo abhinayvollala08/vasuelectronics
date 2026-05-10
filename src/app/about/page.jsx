@@ -80,7 +80,7 @@ const About = () => {
     dark
   } = useDarkMode();
   return <>
-      <style>{`
+    <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap');
 
         .tt[data-theme="light"] {
@@ -223,22 +223,22 @@ const About = () => {
         .tt-pls { animation:ttPls 1.8s ease-in-out infinite; }
       `}</style>
 
-      <div className="tt" data-theme={dark ? "dark" : "light"}>
+    <div className="tt" data-theme={dark ? "dark" : "light"}>
 
-        {/* ══════════════════════════════════════════════════════
+      {/* ══════════════════════════════════════════════════════
             HERO
          ══════════════════════════════════════════════════════ */}
-        <section style={{
+      <section style={{
         background: "var(--bg)",
         position: "relative",
         overflow: "hidden"
       }}>
-          <div className="tt-grid" style={{
+        <div className="tt-grid" style={{
           position: "absolute",
           inset: 0,
           pointerEvents: "none"
         }} />
-          <div style={{
+        <div style={{
           position: "absolute",
           top: "-10%",
           right: "-8%",
@@ -248,7 +248,7 @@ const About = () => {
           background: "radial-gradient(circle, var(--blob1) 0%, transparent 68%)",
           pointerEvents: "none"
         }} />
-          <div style={{
+        <div style={{
           position: "absolute",
           bottom: "-8%",
           left: "-6%",
@@ -259,19 +259,19 @@ const About = () => {
           pointerEvents: "none"
         }} />
 
-          <div className="tt-wrap" style={{
+        <div className="tt-wrap" style={{
           position: "relative",
           zIndex: 1
         }}>
-            <div className="tt-about-hero-grid">
+          <div className="tt-about-hero-grid">
 
-              {/* Left */}
-              <motion.div {...fadeUp(0)}>
-                <div className="tt-pill tt-hero-pill" style={{
+            {/* Left */}
+            <motion.div {...fadeUp(0)}>
+              <div className="tt-pill tt-hero-pill" style={{
                 marginBottom: 22,
                 width: "fit-content"
               }}>
-                  <span className="tt-pls" style={{
+                <span className="tt-pls" style={{
                   width: 6,
                   height: 6,
                   borderRadius: "50%",
@@ -279,22 +279,22 @@ const About = () => {
                   display: "inline-block",
                   flexShrink: 0
                 }} />
-                  Serving Since 2014
-                </div>
-                <h1 className="tt-serif" style={{
+                Serving Since 2014
+              </div>
+              <h1 className="tt-serif" style={{
                 fontSize: "clamp(2.4rem,5vw,3.7rem)",
                 lineHeight: 1.08,
                 color: "var(--tx1)",
                 marginBottom: 18
               }}>
-                  A Decade of<br />
-                  <em style={{
+                A Decade of<br />
+                <em style={{
                   color: "var(--accent)",
                   fontStyle: "italic"
                 }}>Trusted</em><br />
-                  Appliance Repairs
-                </h1>
-                <div className="tt-hero-rule" style={{
+                Appliance Repairs
+              </h1>
+              <div className="tt-hero-rule" style={{
                 width: 52,
                 height: 3,
                 borderRadius: 2,
@@ -302,309 +302,309 @@ const About = () => {
                 marginBottom: 20,
                 opacity: .7
               }} />
-                <p style={{
+              <p style={{
                 fontSize: ".97rem",
                 lineHeight: 1.82,
                 color: "var(--tx2)",
                 maxWidth: 460
               }}>
-                  TechnoTV Electronics &amp; Home Theater Service Center — the authorised multi-brand repair facility
-                  trusted by thousands of homes across{" "}
-                  <strong style={{
+                Vasu Electronics Electronics &amp; Home Theater Service Center — the authorised multi-brand repair facility
+                trusted by thousands of homes across{" "}
+                <strong style={{
                   color: "var(--tx1)",
                   fontWeight: 600
                 }}>Peddapalli &amp; Mancherial</strong>{" "}
-                  districts.
-                </p>
-              </motion.div>
+                districts.
+              </p>
+            </motion.div>
 
-              {/* Right — quick stats */}
-              <motion.div {...fadeUp(0.13)}>
-                <div className="tt-card tt-dots" style={{
+            {/* Right — quick stats */}
+            <motion.div {...fadeUp(0.13)}>
+              <div className="tt-card tt-dots" style={{
                 padding: 10
               }}>
-                  <div className="tt-g2" style={{
+                <div className="tt-g2" style={{
                   marginBottom: 10
                 }}>
-                    {stats.map((s, i) => <motion.div key={i} {...fadeUp(0.1 + i * 0.07)} style={{
+                  {stats.map((s, i) => <motion.div key={i} {...fadeUp(0.1 + i * 0.07)} style={{
                     padding: "22px 14px",
                     textAlign: "center",
                     borderRadius: 10,
                     background: i % 2 === 0 ? "var(--surface)" : "var(--subtle)",
                     border: "1px solid var(--border)"
                   }}>
-                        <div className="tt-serif" style={{
+                    <div className="tt-serif" style={{
                       fontSize: "clamp(1.6rem,3vw,2.2rem)",
                       color: "var(--accent)",
                       lineHeight: 1
                     }}>{s.value}</div>
-                        <div className="tt-mono" style={{
+                    <div className="tt-mono" style={{
                       fontSize: ".62rem",
                       color: "var(--tx3)",
                       marginTop: 7,
                       letterSpacing: ".13em",
                       textTransform: "uppercase"
                     }}>{s.label}</div>
-                      </motion.div>)}
-                  </div>
-                  <div className="tt-accent-surface" style={{
+                  </motion.div>)}
+                </div>
+                <div className="tt-accent-surface" style={{
                   padding: "14px 16px",
                   display: "flex",
                   alignItems: "center",
                   gap: 10
                 }}>
-                    <ShieldCheck size={18} style={{
+                  <ShieldCheck size={18} style={{
                     color: "var(--accent)",
                     flexShrink: 0
                   }} />
-                    <div>
-                      <div style={{
+                  <div>
+                    <div style={{
                       fontSize: ".82rem",
                       fontWeight: 600,
                       color: "var(--tx1)"
                     }}>Warranty on Every Repair</div>
-                      <div style={{
+                    <div style={{
                       fontSize: ".73rem",
                       color: "var(--tx3)",
                       marginTop: 1
                     }}>Written post-service guarantee on all jobs</div>
-                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
+            </motion.div>
 
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ══════════════════════════════════════════════════════
+      {/* ══════════════════════════════════════════════════════
             OUR STORY
          ══════════════════════════════════════════════════════ */}
-        <section className="tt-sec" style={{
+      <section className="tt-sec" style={{
         background: "var(--surface)",
         position: "relative",
         overflow: "hidden"
       }}>
-          <div className="tt-grid" style={{
+        <div className="tt-grid" style={{
           position: "absolute",
           inset: 0,
           pointerEvents: "none"
         }} />
-          <div className="tt-wrap" style={{
+        <div className="tt-wrap" style={{
           position: "relative",
           zIndex: 1
         }}>
 
-            <motion.div {...fadeUp(0)} style={{
+          <motion.div {...fadeUp(0)} style={{
             maxWidth: 680,
             marginBottom: 56
           }}>
-              <span className="tt-lbl">Our Story</span>
-              <h2 className="tt-serif" style={{
+            <span className="tt-lbl">Our Story</span>
+            <h2 className="tt-serif" style={{
               fontSize: "clamp(1.7rem,3.6vw,2.5rem)",
               color: "var(--tx1)",
               lineHeight: 1.15,
               marginBottom: 20
             }}>
-                Built on Trust &amp; Expertise
-              </h2>
-              <p style={{
+              Built on Trust &amp; Expertise
+            </h2>
+            <p style={{
               fontSize: ".93rem",
               lineHeight: 1.82,
               color: "var(--tx2)",
               marginBottom: 14
             }}>
-                Founded in 2014, TechnoTV started as a small TV repair shop in Peddapalli with a simple vision:
-                to provide honest, reliable, and affordable electronics repair services to our community.
-              </p>
-              <p style={{
+              Founded in 2014, Vasu Electronics started as a small TV repair shop in Peddapalli with a simple vision:
+              to provide honest, reliable, and affordable electronics repair services to our community.
+            </p>
+            <p style={{
               fontSize: ".9rem",
               lineHeight: 1.82,
               color: "var(--tx3)"
             }}>
-                Over the years, we expanded our expertise to cover LED &amp; LCD TVs, home theatre systems, air conditioners,
-                washing machines, and refrigerators. Our commitment to quality earned us authorised service center
-                status for over 15 leading brands — and the loyalty of thousands of families across two districts.
-              </p>
-            </motion.div>
+              Over the years, we expanded our expertise to cover LED &amp; LCD TVs, home theatre systems, air conditioners,
+              washing machines, and refrigerators. Our commitment to quality earned us authorised service center
+              status for over 15 leading brands — and the loyalty of thousands of families across two districts.
+            </p>
+          </motion.div>
 
-            {/* Timeline */}
-            <div style={{
+          {/* Timeline */}
+          <div style={{
             position: "relative",
             paddingLeft: 56
           }}>
-              <div className="tt-timeline-line" />
-              <div style={{
+            <div className="tt-timeline-line" />
+            <div style={{
               display: "flex",
               flexDirection: "column",
               gap: 28
             }}>
-                {milestones.map((m, i) => <motion.div key={i} {...fadeUp(i * 0.09)} style={{
+              {milestones.map((m, i) => <motion.div key={i} {...fadeUp(i * 0.09)} style={{
                 display: "flex",
                 gap: 20,
                 alignItems: "flex-start"
               }}>
-                    <div className="tt-timeline-dot" style={{
+                <div className="tt-timeline-dot" style={{
                   position: "absolute",
                   left: 0
                 }}>
-                      <span className="tt-mono" style={{
+                  <span className="tt-mono" style={{
                     fontSize: ".55rem",
                     color: "var(--accent)",
                     fontWeight: 600,
                     letterSpacing: ".05em"
                   }}>{m.year.slice(2)}</span>
-                    </div>
-                    <div className="tt-card tt-card-hover" style={{
+                </div>
+                <div className="tt-card tt-card-hover" style={{
                   padding: "18px 20px",
                   flex: 1
                 }}>
-                      <div style={{
+                  <div style={{
                     display: "flex",
                     alignItems: "center",
                     gap: 10,
                     marginBottom: 6
                   }}>
-                        <span className="tt-mono" style={{
+                    <span className="tt-mono" style={{
                       fontSize: ".65rem",
                       color: "var(--accent)",
                       letterSpacing: ".12em"
                     }}>{m.year}</span>
-                        <span style={{
+                    <span style={{
                       width: 4,
                       height: 4,
                       borderRadius: "50%",
                       background: "var(--border-str)",
                       display: "inline-block"
                     }} />
-                        <span style={{
+                    <span style={{
                       fontWeight: 600,
                       fontSize: ".9rem",
                       color: "var(--tx1)"
                     }}>{m.title}</span>
-                      </div>
-                      <p style={{
+                  </div>
+                  <p style={{
                     fontSize: ".82rem",
                     color: "var(--tx3)",
                     lineHeight: 1.65,
                     margin: 0
                   }}>{m.desc}</p>
-                    </div>
-                  </motion.div>)}
-              </div>
+                </div>
+              </motion.div>)}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <div className="tt-wrap"><div className="tt-divider" /></div>
+      <div className="tt-wrap"><div className="tt-divider" /></div>
 
-        {/* ══════════════════════════════════════════════════════
+      {/* ══════════════════════════════════════════════════════
             VALUES
          ══════════════════════════════════════════════════════ */}
-        <section className="tt-sec" style={{
+      <section className="tt-sec" style={{
         background: "var(--bg)"
       }}>
-          <div className="tt-wrap">
-            <motion.div {...fadeUp(0)} style={{
+        <div className="tt-wrap">
+          <motion.div {...fadeUp(0)} style={{
             marginBottom: 44
           }}>
-              <span className="tt-lbl">Our Values</span>
-              <h2 className="tt-serif" style={{
+            <span className="tt-lbl">Our Values</span>
+            <h2 className="tt-serif" style={{
               fontSize: "clamp(1.7rem,3.6vw,2.5rem)",
               color: "var(--tx1)",
               lineHeight: 1.15
             }}>
-                What Drives Us
-              </h2>
-            </motion.div>
+              What Drives Us
+            </h2>
+          </motion.div>
 
-            <div className="tt-g2">
-              {values.map((v, i) => <motion.div key={i} {...fadeUp(i * 0.08)} className="tt-card tt-card-hover" style={{
+          <div className="tt-g2">
+            {values.map((v, i) => <motion.div key={i} {...fadeUp(i * 0.08)} className="tt-card tt-card-hover" style={{
               padding: "26px 24px",
               display: "flex",
               gap: 16,
               alignItems: "flex-start"
             }}>
-                  <div className="tt-dots" style={{
+              <div className="tt-dots" style={{
                 position: "absolute",
                 inset: 0,
                 borderRadius: "inherit",
                 pointerEvents: "none",
                 opacity: .5
               }} />
-                  <div className="tt-ib" style={{
+              <div className="tt-ib" style={{
                 flexShrink: 0,
                 position: "relative",
                 zIndex: 1
               }}>
-                    <v.Icon size={19} style={{
+                <v.Icon size={19} style={{
                   color: "var(--accent)"
                 }} />
-                  </div>
-                  <div style={{
+              </div>
+              <div style={{
                 position: "relative",
                 zIndex: 1
               }}>
-                    <h3 style={{
+                <h3 style={{
                   fontWeight: 600,
                   fontSize: ".95rem",
                   color: "var(--tx1)",
                   marginBottom: 7,
                   lineHeight: 1.3
                 }}>{v.title}</h3>
-                    <p style={{
+                <p style={{
                   fontSize: ".83rem",
                   lineHeight: 1.7,
                   color: "var(--tx3)",
                   margin: 0
                 }}>{v.desc}</p>
-                  </div>
-                </motion.div>)}
-            </div>
+              </div>
+            </motion.div>)}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <div className="tt-wrap"><div className="tt-divider" /></div>
+      <div className="tt-wrap"><div className="tt-divider" /></div>
 
-        {/* ══════════════════════════════════════════════════════
+      {/* ══════════════════════════════════════════════════════
             WHY CHOOSE US
          ══════════════════════════════════════════════════════ */}
-        <section className="tt-sec" style={{
+      <section className="tt-sec" style={{
         background: "var(--surface)",
         position: "relative",
         overflow: "hidden"
       }}>
-          <div className="tt-dots" style={{
+        <div className="tt-dots" style={{
           position: "absolute",
           inset: 0,
           pointerEvents: "none",
           opacity: .6
         }} />
-          <div className="tt-wrap" style={{
+        <div className="tt-wrap" style={{
           position: "relative",
           zIndex: 1
         }}>
 
-            <motion.div {...fadeUp(0)} style={{
+          <motion.div {...fadeUp(0)} style={{
             textAlign: "center",
             marginBottom: 52
           }}>
-              <span className="tt-lbl">Why TechnoTV</span>
-              <h2 className="tt-serif" style={{
+            <span className="tt-lbl">Why Vasu Electronics</span>
+            <h2 className="tt-serif" style={{
               fontSize: "clamp(1.7rem,3.6vw,2.5rem)",
               color: "var(--tx1)",
               lineHeight: 1.15
             }}>
-                Your Appliances. Our Responsibility.
-              </h2>
-            </motion.div>
+              Your Appliances. Our Responsibility.
+            </h2>
+          </motion.div>
 
-            <div style={{
+          <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: 20
           }}>
-              {[{
+            {[{
               Icon: ShieldCheck,
               title: "Genuine Parts Only",
               desc: "OEM-certified components — no cheap substitutes, ever."
@@ -624,7 +624,7 @@ const About = () => {
               padding: "26px 22px",
               textAlign: "center"
             }}>
-                  <div style={{
+              <div style={{
                 width: 48,
                 height: 48,
                 borderRadius: 12,
@@ -635,27 +635,27 @@ const About = () => {
                 justifyContent: "center",
                 margin: "0 auto 16px"
               }}>
-                    <item.Icon size={20} style={{
+                <item.Icon size={20} style={{
                   color: "var(--accent)"
                 }} />
-                  </div>
-                  <h4 style={{
+              </div>
+              <h4 style={{
                 fontWeight: 600,
                 fontSize: ".93rem",
                 color: "var(--tx1)",
                 marginBottom: 8
               }}>{item.title}</h4>
-                  <p style={{
+              <p style={{
                 fontSize: ".81rem",
                 color: "var(--tx3)",
                 lineHeight: 1.65,
                 margin: 0
               }}>{item.desc}</p>
-                </motion.div>)}
-            </div>
+            </motion.div>)}
+          </div>
 
-            {/* Warranty banner */}
-            <motion.div {...fadeUp(0.2)} style={{
+          {/* Warranty banner */}
+          <motion.div {...fadeUp(0.2)} style={{
             marginTop: 32,
             padding: "24px 28px",
             borderRadius: 14,
@@ -666,7 +666,7 @@ const About = () => {
             gap: 18,
             flexWrap: "wrap"
           }}>
-              <div style={{
+            <div style={{
               width: 48,
               height: 48,
               borderRadius: 12,
@@ -677,51 +677,51 @@ const About = () => {
               flexShrink: 0,
               boxShadow: "0 4px 14px rgba(26,95,191,.3)"
             }}>
-                <ShieldCheck size={22} style={{
+              <ShieldCheck size={22} style={{
                 color: "#fff"
               }} />
-              </div>
-              <div style={{
+            </div>
+            <div style={{
               flex: 1,
               minWidth: 200
             }}>
-                <div style={{
+              <div style={{
                 fontWeight: 700,
                 fontSize: ".95rem",
                 color: "var(--tx1)",
                 marginBottom: 4
               }}>Warranty on Every Repair</div>
-                <div style={{
+              <div style={{
                 fontSize: ".82rem",
                 color: "var(--tx3)",
                 lineHeight: 1.6
               }}>
-                  All repairs backed by a written post-service warranty. Genuine parts with serial-number traceability. Your peace of mind is guaranteed.
-                </div>
+                All repairs backed by a written post-service warranty. Genuine parts with serial-number traceability. Your peace of mind is guaranteed.
               </div>
-              <div style={{
+            </div>
+            <div style={{
               display: "flex",
               flexDirection: "column",
               gap: 6
             }}>
-                {["Transparent pricing", "Post-repair warranty", "Genuine spare parts"].map((t, i) => <div key={i} style={{
+              {["Transparent pricing", "Post-repair warranty", "Genuine spare parts"].map((t, i) => <div key={i} style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 7,
                 fontSize: ".8rem",
                 color: "var(--tx2)"
               }}>
-                    <CheckCircle size={13} style={{
+                <CheckCircle size={13} style={{
                   color: "var(--accent)",
                   flexShrink: 0
                 }} /> {t}
-                  </div>)}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+              </div>)}
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-      </div>
-    </>;
+    </div>
+  </>;
 };
 export default About;
